@@ -8,6 +8,16 @@ const fetchBooks = () => {
     .then(books => renderBookList(books))
     .catch(error => console.error(error));
 };
+//async await
+// const fetchBooks = async () => {
+//   try {
+//     const response = await fetch(BOOK_URL);
+//     const books = await response.json();
+//     renderBooks(books);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
 const renderBookList = books => {
   books.forEach(createLi);
@@ -32,6 +42,17 @@ const fetchBook = event => {
     .then(book => renderSingleBook(book))
     .catch(error => console.error(error));
 };
+//async;
+// const fetchBook = async event => {
+//   try {
+//     let bookId = event.target.id;
+//     const response = await fetch(BOOK_URL + bookId);
+//     const book = await response.json();
+//     renderSingleBook(book);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
 const renderSingleBook = book => {
   const panel = document.getElementById('show-panel');
@@ -87,25 +108,4 @@ const editBook = (bookId, data) => {
 
 fetchBooks();
 
-//async await
-// const fetchBooks = async () => {
-//   try {
-//     const response = await fetch(BOOK_URL);
-//     const books = await response.json();
-//     renderBooks(books);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
 
-//async;
-// const fetchBook = async event => {
-//   try {
-//     let bookId = event.target.id;
-//     const response = await fetch(BOOK_URL + bookId);
-//     const book = await response.json();
-//     renderSingleBook(book);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };

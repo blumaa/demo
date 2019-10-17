@@ -1,0 +1,10 @@
+body {
+	display: grid;
+	grid-template-columns: 2fr 8fr
+}
+
+textarea {
+	height: 100px;
+	width: 600px;
+	resize: none
+}
